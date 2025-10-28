@@ -1,0 +1,126 @@
+/* === Header Base === */
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  background: #0f172a;
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.4s ease;
+}
+
+.header.scrolled {
+  background: rgba(10, 10, 20, 0.9);
+  box-shadow: 0 0 25px rgba(0, 180, 216, 0.3);
+  border-bottom: 1px solid rgba(0, 180, 216, 0.2);
+}
+
+/* === Navbar === */
+.navbar {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 14px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+}
+
+/* === Logo === */
+.logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+}
+.logo span {
+  color: #00b4d8;
+  font-weight: 600;
+}
+.header.scrolled .logo span {
+  text-shadow: 0 0 8px #00b4d8;
+}
+
+/* === Nav Links === */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  transition: all 0.3s ease;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #cfcfcf;
+  font-weight: 500;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* Hover and Active State */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, #00b4d8, #48cae4);
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #fff;
+  text-shadow: 0 0 8px #00b4d8;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+/* === Hamburger === */
+.menu-icon {
+  display: none;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.menu-icon:hover {
+  transform: rotate(90deg);
+}
+
+/* === Mobile === */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background: #0b0b12;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: all 0.4s ease;
+  }
+
+  .nav-links.open {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .nav-links a {
+    font-size: 1.2rem;
+  }
+}
