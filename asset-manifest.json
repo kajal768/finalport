@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/kajal768/finalport.git/static/css/main.c0bccd27.css",
+    "main.js": "/kajal768/finalport.git/static/js/main.d9fbf698.js",
+    "static/js/453.ca760c35.chunk.js": "/kajal768/finalport.git/static/js/453.ca760c35.chunk.js",
+    "static/media/bg.jpg": "/kajal768/finalport.git/static/media/bg.8ecc1f3d99919d5d818c.jpg",
+    "index.html": "/kajal768/finalport.git/index.html",
+    "main.c0bccd27.css.map": "/kajal768/finalport.git/static/css/main.c0bccd27.css.map",
+    "main.d9fbf698.js.map": "/kajal768/finalport.git/static/js/main.d9fbf698.js.map",
+    "453.ca760c35.chunk.js.map": "/kajal768/finalport.git/static/js/453.ca760c35.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c0bccd27.css",
+    "static/js/main.d9fbf698.js"
+  ]
+}
